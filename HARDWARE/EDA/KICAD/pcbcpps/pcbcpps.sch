@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "pcb coupled protection for power supply"
-Date "2022-04-19"
-Rev "1"
+Date "2022-04-26"
+Rev "2"
 Comp ""
 Comment1 "Tec. Henrique Silva"
 Comment2 ""
@@ -25,39 +25,6 @@ F 3 "~" H 5150 2800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J1
-U 1 1 625ADE71
-P 4700 2800
-F 0 "J1" H 4592 2575 50  0000 C CNN
-F 1 "LINE IN" H 4592 2666 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D5.0mm" H 4700 2800 50  0001 C CNN
-F 3 "~" H 4700 2800 50  0001 C CNN
-	1    4700 2800
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J2
-U 1 1 625AE1C4
-P 4700 3550
-F 0 "J2" H 4592 3325 50  0000 C CNN
-F 1 "NEUTRAL" H 4592 3416 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D5.0mm" H 4700 3550 50  0001 C CNN
-F 3 "~" H 4700 3550 50  0001 C CNN
-	1    4700 3550
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J6
-U 1 1 625B0827
-P 6850 2800
-F 0 "J6" H 6742 2575 50  0000 C CNN
-F 1 "LINE OUT" H 6742 2666 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D5.0mm" H 6850 2800 50  0001 C CNN
-F 3 "~" H 6850 2800 50  0001 C CNN
-	1    6850 2800
-	1    0    0    1   
-$EndComp
-$Comp
 L Connector:Conn_01x01_Female J7
 U 1 1 625B082D
 P 6850 3550
@@ -66,28 +33,6 @@ F 1 "NEUTRAL" H 6742 3416 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Plated_Hole_D5.0mm" H 6850 3550 50  0001 C CNN
 F 3 "~" H 6850 3550 50  0001 C CNN
 	1    6850 3550
-	1    0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J3
-U 1 1 625B12B3
-P 6700 4900
-F 0 "J3" H 6600 5050 50  0000 C CNN
-F 1 "+12V" H 6600 4800 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D5.0mm" H 6700 4900 50  0001 C CNN
-F 3 "~" H 6700 4900 50  0001 C CNN
-	1    6700 4900
-	1    0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J4
-U 1 1 625B12AD
-P 6700 5650
-F 0 "J4" H 6600 5800 50  0000 C CNN
-F 1 "0V" H 6600 5550 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D5.0mm" H 6700 5650 50  0001 C CNN
-F 3 "~" H 6700 5650 50  0001 C CNN
-	1    6700 5650
 	1    0    0    1   
 $EndComp
 $Comp
@@ -140,7 +85,7 @@ U 1 1 625C8BBD
 P 5800 5250
 F 0 "C1" H 5918 5296 50  0000 L CNN
 F 1 "CP" H 5918 5205 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 5838 5100 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 5838 5100 50  0001 C CNN
 F 3 "~" H 5800 5250 50  0001 C CNN
 	1    5800 5250
 	1    0    0    -1  
@@ -153,42 +98,16 @@ Wire Wire Line
 Connection ~ 5800 5650
 Wire Wire Line
 	5800 5650 6150 5650
-$Comp
-L Device:LED D2
-U 1 1 625C96C0
-P 6150 5100
-F 0 "D2" V 6189 4983 50  0000 R CNN
-F 1 "LED" V 6098 4983 50  0000 R CNN
-F 2 "LED_THT:LED_D5.0mm" H 6150 5100 50  0001 C CNN
-F 3 "~" H 6150 5100 50  0001 C CNN
-	1    6150 5100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 625CA7EC
-P 6150 5450
-F 0 "R2" H 6220 5496 50  0000 L CNN
-F 1 "1K" H 6220 5405 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6080 5450 50  0001 C CNN
-F 3 "~" H 6150 5450 50  0001 C CNN
-	1    6150 5450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5800 5400 5800 5650
 Wire Wire Line
 	6150 5600 6150 5650
 Connection ~ 6150 5650
 Wire Wire Line
-	6150 5650 6500 5650
-Wire Wire Line
 	6150 4950 6150 4900
 Wire Wire Line
 	5800 4900 6150 4900
 Connection ~ 6150 4900
-Wire Wire Line
-	6150 4900 6500 4900
 Wire Wire Line
 	6150 5300 6150 5250
 $Comp
@@ -212,17 +131,6 @@ F 2 "TestPoint:TestPoint_Plated_Hole_D5.0mm" H 6850 4300 50  0001 C CNN
 F 3 "~" H 6850 4300 50  0001 C CNN
 	1    6850 4300
 	1    0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J11
-U 1 1 625E6DC6
-P 4700 4300
-F 0 "J11" H 4592 4485 50  0000 C CNN
-F 1 "EARTH" H 4592 4394 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D5.0mm" H 4700 4300 50  0001 C CNN
-F 3 "~" H 4700 4300 50  0001 C CNN
-	1    4700 4300
-	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:LED D1
@@ -257,8 +165,6 @@ Wire Wire Line
 	6150 3500 6150 3550
 Connection ~ 6150 3550
 Wire Wire Line
-	4900 2800 5000 2800
-Wire Wire Line
 	5700 3000 5700 2800
 Connection ~ 5700 2800
 Wire Wire Line
@@ -268,8 +174,6 @@ Wire Wire Line
 Connection ~ 5700 3550
 Wire Wire Line
 	5700 3550 6000 3550
-Wire Wire Line
-	4900 3550 5700 3550
 $Comp
 L Device:Varistor RV3
 U 1 1 62610623
@@ -303,8 +207,6 @@ Connection ~ 6000 4300
 Wire Wire Line
 	6000 4300 6650 4300
 Wire Wire Line
-	4900 4300 5500 4300
-Wire Wire Line
 	5500 3750 5500 2800
 Connection ~ 5500 2800
 Wire Wire Line
@@ -316,4 +218,98 @@ Wire Wire Line
 	5500 4300 6000 4300
 Wire Wire Line
 	6150 3550 6650 3550
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 626889BD
+P 6800 5300
+F 0 "J3" H 6950 5200 50  0000 C CNN
+F 1 "PWR" H 6800 5050 50  0000 C CNN
+F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_2-G-5.08_1x02_P5.08mm_Vertical" H 6800 5300 50  0001 C CNN
+F 3 "~" H 6800 5300 50  0001 C CNN
+	1    6800 5300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6600 5200 6550 5200
+Wire Wire Line
+	6550 5200 6550 4900
+Wire Wire Line
+	6150 4900 6550 4900
+Wire Wire Line
+	6550 5650 6550 5300
+Wire Wire Line
+	6550 5300 6600 5300
+Wire Wire Line
+	6150 5650 6550 5650
+$Comp
+L power:GND #PWR0101
+U 1 1 62692CF3
+P 6550 5700
+F 0 "#PWR0101" H 6550 5450 50  0001 C CNN
+F 1 "GND" H 6555 5527 50  0000 C CNN
+F 2 "" H 6550 5700 50  0001 C CNN
+F 3 "" H 6550 5700 50  0001 C CNN
+	1    6550 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 5700 6550 5650
+Connection ~ 6550 5650
+$Comp
+L Connector:Screw_Terminal_01x04 J4
+U 1 1 6269C406
+P 3950 3550
+F 0 "J4" H 4100 3450 50  0000 C CNN
+F 1 "PWR" H 3950 3250 50  0000 C CNN
+F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_4-G-5.08_1x04_P5.08mm_Vertical" H 3950 3550 50  0001 C CNN
+F 3 "~" H 3950 3550 50  0001 C CNN
+	1    3950 3550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 3750 4950 3750
+Wire Wire Line
+	4950 3750 4950 4300
+Wire Wire Line
+	4950 4300 5500 4300
+Wire Wire Line
+	5100 3550 5100 3650
+Wire Wire Line
+	5100 3650 4150 3650
+Wire Wire Line
+	5100 3550 5700 3550
+Wire Wire Line
+	4150 3450 4950 3450
+Wire Wire Line
+	4950 3450 4950 2800
+Wire Wire Line
+	4950 2800 5000 2800
+Text Label 6650 2800 0    50   ~ 0
+LINE_OUT
+Text Label 4600 3550 0    50   ~ 0
+LINE_OUT
+Wire Wire Line
+	4600 3550 4150 3550
+$Comp
+L Device:LED D2
+U 1 1 625C96C0
+P 6150 5100
+F 0 "D2" V 6189 4983 50  0000 R CNN
+F 1 "LED" V 6098 4983 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm" H 6150 5100 50  0001 C CNN
+F 3 "~" H 6150 5100 50  0001 C CNN
+	1    6150 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 625CA7EC
+P 6150 5450
+F 0 "R2" H 6220 5496 50  0000 L CNN
+F 1 "1K" H 6220 5405 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6080 5450 50  0001 C CNN
+F 3 "~" H 6150 5450 50  0001 C CNN
+	1    6150 5450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
